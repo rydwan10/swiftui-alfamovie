@@ -196,7 +196,7 @@ struct ProfileView: View {
                             .font(.caption)
                             .foregroundColor(.secondary)
                         
-                        Text("© 2024 AlfaMovie. All rights reserved.")
+                        Text("© 2025 AlfaMovie. All rights reserved.")
                             .font(.caption2)
                             .foregroundColor(.secondary)
                     }
