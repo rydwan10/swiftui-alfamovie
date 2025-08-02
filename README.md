@@ -8,7 +8,8 @@
 [![RxSwift](https://img.shields.io/badge/RxSwift-6.9.0-purple.svg)](https://github.com/ReactiveX/RxSwift)
 
 ---
-<img width="256" height="256" alt="AlfaMovie" src="https://github.com/user-attachments/assets/bf55b2d4-0245-4046-b72e-e95e4e35378c" />
+<img width="256" height="256" alt="AlfaMovie" src="https://github.com/user-attachments/assets/0364da9e-d8f0-47da-be21-0572f6fbcdc6" />
+
 
 ---
 
