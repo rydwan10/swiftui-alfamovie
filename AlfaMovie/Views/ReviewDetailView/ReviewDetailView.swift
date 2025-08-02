@@ -129,20 +129,21 @@ struct ReviewDetailView: View {
 
 #Preview {
     NavigationView {
-        ReviewDetailView(review: Review(
-            id: "1",
-            author: "John Doe",
-            authorDetails: AuthorDetails(
-                name: "John Doe",
-                username: "johndoe",
-                avatarPath: nil,
-                rating: 8.5
-            ),
-            content: "This is a comprehensive review of the movie. The film delivers an outstanding performance with compelling storytelling, excellent cinematography, and memorable performances from the cast. The director's vision is clearly executed throughout the narrative, creating an immersive experience for the audience. The screenplay is well-crafted with engaging dialogue and well-developed characters. The visual effects are stunning and serve the story effectively. Overall, this is a must-watch film that will leave a lasting impression on viewers.",
-            createdAt: "2024-01-15T10:30:00.000Z",
-            updatedAt: "2024-01-15T10:30:00.000Z",
-            url: "https://example.com/review",
-
-        ))
+        ReviewDetailView(
+            review: Review(
+                id: "1",
+                author: "John Doe",
+                authorDetails: AuthorDetails(
+                    name: "John Doe",
+                    username: "johndoe",
+                    avatarPath: nil,
+                    rating: 8.5
+                ),
+                content: "This is a comprehensive review of the movie. The film delivers an outstanding performance with compelling storytelling, excellent cinematography, and memorable performances from the cast. The director's vision is clearly executed throughout the narrative, creating an immersive experience for the audience. The screenplay is well-crafted with engaging dialogue and well-developed characters. The visual effects are stunning and serve the story effectively. Overall, this is a must-watch film that will leave a lasting impression on viewers.",
+                createdAt: "2024-01-15T10:30:00.000Z",
+                updatedAt: "2024-01-15T10:30:00.000Z",
+                url: "https://example.com/review"
+            )
+        )
     }
 }

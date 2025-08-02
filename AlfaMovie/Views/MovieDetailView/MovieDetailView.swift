@@ -273,9 +273,12 @@ struct MovieDetailView: View {
 struct OverviewTab: View {
     let movie: Movie?
     private let genreService = GenreService.shared
+
     
     var body: some View {
+       
         VStack(alignment: .leading, spacing: 20) {
+            
             // Synopsis
             VStack(alignment: .leading, spacing: 12) {
                 Text("Synopsis")
@@ -296,47 +299,32 @@ struct OverviewTab: View {
                         .fontWeight(.bold)
                     
                     VStack(spacing: 8) {
-                        DetailRow(title: "Genre", value: genreService.getGenreNames(for: movie.genreIds ?? []) ?? "Action")
+                        DetailRow(title: "Genre", value: getGenreNames(from: movie) ?? "Action")
                         DetailRow(title: "Release Date", value: movie.formattedReleaseDate)
                         DetailRow(title: "Rating", value: movie.adult ? "R" : "PG-13")
-                        DetailRow(title: "Runtime", value: formatRuntime(movie.runtime))
+                        DetailRow(title: "Runtime", value: FormattingUtils.formatRuntime(movie.runtime))
                         DetailRow(title: "Language", value: movie.originalLanguage.uppercased())
                         DetailRow(title: "Status", value: movie.status ?? "Released")
-                        DetailRow(title: "Budget", value: formatBudget(movie.budget))
-                        DetailRow(title: "Revenue", value: formatRevenue(movie.revenue))
+                        DetailRow(title: "Budget", value: FormattingUtils.formatBudget(movie.budget))
+                        DetailRow(title: "Revenue", value: FormattingUtils.formatRevenue(movie.revenue))
                     }
                 }
             }
         }
     }
     
-    private func formatRuntime(_ runtime: Int?) -> String {
-        guard let runtime = runtime, runtime > 0 else { return "Unknown" }
-        let hours = runtime / 60
-        let minutes = runtime % 60
-        return "\(hours)h \(minutes)m"
-    }
-    
-    private func formatBudget(_ budget: Int?) -> String {
-        guard let budget = budget, budget > 0 else { return "Unknown" }
-        if budget >= 1_000_000_000 {
-            return "$\(budget / 1_000_000_000)B"
-        } else if budget >= 1_000_000 {
-            return "$\(budget / 1_000_000)M"
-        } else {
-            return "$\(budget)"
+    private func getGenreNames(from movie: Movie) -> String? {
+        // First try to use the genres array (available in movie details)
+        if let genres = movie.genres, !genres.isEmpty {
+            return genres.map { $0.name }.joined(separator: ", ")
         }
-    }
-    
-    private func formatRevenue(_ revenue: Int?) -> String {
-        guard let revenue = revenue, revenue > 0 else { return "Unknown" }
-        if revenue >= 1_000_000_000 {
-            return "$\(revenue / 1_000_000_000)B"
-        } else if revenue >= 1_000_000 {
-            return "$\(revenue / 1_000_000)M"
-        } else {
-            return "$\(revenue)"
+        
+        // Fallback to genreIds (available in list responses)
+        if let genreIds = movie.genreIds, !genreIds.isEmpty {
+            return genreService.getGenreNames(for: genreIds)
         }
+        
+        return nil
     }
 }
 

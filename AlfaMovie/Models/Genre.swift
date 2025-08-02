@@ -10,9 +10,9 @@ import SwiftData
 
 @Model
 class CachedGenre: Identifiable {
-    let id: Int
-    let name: String
-    let lastUpdated: Date
+    var id: Int
+    var name: String
+    var lastUpdated: Date
     
     init(id: Int, name: String) {
         self.id = id
