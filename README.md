@@ -8,7 +8,8 @@
 [![RxSwift](https://img.shields.io/badge/RxSwift-6.9.0-purple.svg)](https://github.com/ReactiveX/RxSwift)
 
 ---
-<img width="256" height="256" alt="AlfaMovie" src="https://github.com/user-attachments/assets/bf55b2d4-0245-4046-b72e-e95e4e35378c" />
+<img width="256" height="256" alt="AlfaMovie" src="https://github.com/user-attachments/assets/0364da9e-d8f0-47da-be21-0572f6fbcdc6" />
+
 
 ---
 
@@ -21,27 +22,48 @@
 - **Recently Added** - Infinite scroll with pagination
 - **Branded Header** - Custom AlfaMovie branding with notification bell
 
+
+https://github.com/user-attachments/assets/fe6ec2cb-ae92-4d91-a94a-a1bf804ec348
+
+
+
 ### 🔍 **Search & Discovery**
 - **Smart Search** - Debounced search with real-time results
 - **Popular Movies** - Dynamic popular movie recommendations
 - **Trending Movies** - Current trending content
 - **Genre Filtering** - Browse movies by category
-- **Search History** - Intelligent search suggestions
+
+***Movie by Category
+
+https://github.com/user-attachments/assets/3b97cf0a-3036-4185-bb88-d662a592ee6c
+
+***Search Movie
+
+https://github.com/user-attachments/assets/356dc3ad-8ada-432d-be18-9734d426b228
+
 
 ### 🎭 **Movie Details**
 - **Rich Information** - Complete movie metadata (budget, revenue, runtime, etc.)
-- **Cast & Crew** - Beautiful cast member cards with profile images
+- **Cast & Crew** - Cast member cards with profile images
 - **Movie Reviews** - User reviews with author avatars and ratings
-- **Related Movies** - Smart movie recommendations
+- **Related Movies** -  Movie recommendations
 - **YouTube Trailers** - In-app trailer viewing with custom WebView
-- **Movie Posters** - High-quality poster and backdrop images
+- **Movie Posters** - poster and backdrop images
+
+
+https://github.com/user-attachments/assets/497ad3f3-7a32-4e43-8146-1ba1675ce7f4
+
+
+
+
 
 ### 🎨 **UI/UX Excellence**
 - **Modern Design** - Clean, intuitive interface with custom colors
-- **Loading States** - Elegant loading animations and skeleton screens
-- **Error Handling** - User-friendly error messages with retry options
-- **Responsive Layout** - Optimized for all iOS devices
-- **Smooth Animations** - Fluid transitions and micro-interactions
+- **Loading States** - loading animations and skeleton screens
+- **Error Handling** - Error messages with retry options
+
+<img width="510" height="968" alt="Screenshot 2025-08-02 at 19 30 06" src="https://github.com/user-attachments/assets/dc48df00-cb8c-4ae2-ad31-3aa48086ecc0" />
+
 
 ---
 
